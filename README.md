@@ -1,5 +1,5 @@
 # FiveM-ESX-Anti-DDoS-Script
-A simple anti-DDoS protection script designed to work with any ESX-based FiveM server. It limits the number of connection attempts per second from a single IP address and temporarily bans IPs that exceed the threshold.
+A simple anti-DDoS protection script designed to prevent excessive connection attempts on FiveM servers. Supports both ESX and QBCore frameworks with a customizable option.
 
 # Features
 Limits connection attempts to 5 per second per IP
