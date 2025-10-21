@@ -1,42 +1,53 @@
 # FiveM-ESX-Anti-DDoS-Script
 A simple anti-DDoS protection script designed to prevent excessive connection attempts on FiveM servers. Supports both ESX and QBCore frameworks with a customizable option.
 
-# Features
+## Features
 Limits connection attempts to 5 per second per IP
 
--Temporarily bans IPs spamming connection requests
+Temporarily bans IPs spamming connection requests
 
--Easy integration with ESX servers
+Supports ESX and QBCore frameworks
 
--Periodic cleanup of connection attempt counters
+Easy to configure for your preferred framework
 
-# Installation
--Place the fxmanifest.lua and server.lua files in a new resource folder inside your FiveM server's resources directory.
+Periodic cleanup of connection attempt counters
 
--Add start <resource-folder-name> to your server configuration file (server.cfg).
+## Installation
+Place the fxmanifest.lua and server.lua files in a resource folder inside your FiveM server's resources directory.
 
--Restart your server or start the resource manually.
+Add start <resource-folder-name> to your server configuration file (server.cfg).
 
-# Usage
-The script automatically activates and monitors player connection attempts upon startup. No additional configuration is needed by default.
+Restart your server or start the resource manually.
 
-If an IP exceeds 5 connection attempts within one second, it will be banned temporarily from connecting until the script resets the counters.
+## Usage
+The script automatically monitors player connection attempts upon startup.
 
-# Configuration
-You can adjust the following parameters in server.lua:
+## Framework Selection
+In server.lua, set the framework variable to your server's framework:
+
+lua
+local framework = 'esx' -- or 'qbcore'
+The script uses the native FiveM connection event, so it works with both frameworks seamlessly. Framework-specific adjustments can be added in the configuration section.
+
+If an IP exceeds 5 connection attempts within one second, it will be temporarily banned until the script resets the counters.
+
+## Configuration
+Adjust these parameters in server.lua:
 
 maxConnectionsPerSec — maximum allowed connections per IP per second (default: 5)
 
 resetInterval — interval in milliseconds to reset connection counts (default: 1000 ms)
 
-# How it works
-When a player tries to connect, the script checks the player's IP.
+framework — set to 'esx' or 'qbcore' depending on your server setup
 
-It tracks the number of connect attempts in the last second.
+## How it works
+On player connect, the script fetches the player's IP.
 
-If exceeded, the IP is banned and denied further connections temporarily.
+It tracks connection attempts within the last second.
 
-The script clears all connection attempts every 30 seconds automatically.
+IPs with excessive rapid connections are banned temporarily.
+
+Counters reset every 30 seconds automatically.
 
 
 ## 📜 License
