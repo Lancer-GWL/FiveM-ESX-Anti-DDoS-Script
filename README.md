@@ -19,8 +19,6 @@ Open your server configuration file (server.cfg) and add the following line to s
 
 Restart your FiveM server or start the resource manually using the server console command: 'start anti_ddos'
 
-Restart your server or start the resource manually.
-
 ## Usage
 The script automatically monitors player connection attempts upon startup.
 
