@@ -1,4 +1,4 @@
-# FiveM-ESX-Anti-DDoS-Script
+# FiveM-ESX-QBCore-Anti-DDoS-Script
 A simple anti-DDoS protection script designed to prevent excessive connection attempts on FiveM servers. Supports both ESX and QBCore frameworks with a customizable option.
 
 ## Features
