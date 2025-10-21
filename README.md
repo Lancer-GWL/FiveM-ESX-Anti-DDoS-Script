@@ -13,9 +13,11 @@ Easy to configure for your preferred framework
 Periodic cleanup of connection attempt counters
 
 ## Installation
-Place the fxmanifest.lua and server.lua files in a resource folder inside your FiveM server's resources directory.
+Place the fxmanifest.lua and server.lua files in a folder named 'anti_ddos' inside your FiveM server's resources directory.
 
-Add start <resource-folder-name> to your server configuration file (server.cfg).
+Open your server configuration file (server.cfg) and add the following line to start the resource automatically: 'start anti_ddos'
+
+Restart your FiveM server or start the resource manually using the server console command: 'start anti_ddos'
 
 Restart your server or start the resource manually.
 
