@@ -1,12 +1,9 @@
--- Simple FiveM Anti-DDoS Script
--- Works with any ESX-based server & QBCore based server
-
 -- Config: Choose your framework here ('esx' or 'qbcore')
 local framework = 'esx'
 
 local connectionAttempts = {}
-local maxConnectionsPerSec = 5
-local resetInterval = 1000
+local maxConnectionsPerSec = 5 -- Allow 5 joins per second
+local resetInterval = 1000 -- 1 second
 local bannedIPs = {}
 
 function banIP(ip)
@@ -47,9 +44,9 @@ AddEventHandler("playerConnecting", function(name, setKickReason, deferrals)
 
         -- Additional framework-specific integration can go here
         if framework == 'esx' then
-            -- ESX specific code if any
+            -- ESX specific code if needed
         elseif framework == 'qbcore' then
-            -- QBCore specific code if any
+            -- QBCore specific code if needed
         end
     end
 
@@ -58,11 +55,9 @@ end)
 
 Citizen.CreateThread(function()
     while true do
-        Citizen.Wait(30000)
+        Citizen.Wait(30000) -- Clear connection attempts every 30 seconds
         connectionAttempts = {}
     end
 end)
 
 print("[Anti-DDoS] Script loaded successfully for framework: " .. framework)
-
-
