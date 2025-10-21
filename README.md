@@ -37,3 +37,12 @@ It tracks the number of connect attempts in the last second.
 If exceeded, the IP is banned and denied further connections temporarily.
 
 The script clears all connection attempts every 30 seconds automatically.
+
+
+## 📜 License
+This resource is released for public and educational use under the MIT license. Attribution to Lancer is appreciated. Do not resell or repackage without permission.
+
+## 📞 Support
+💬 Discord: [discord.gg/lancerhud](https://discord.gg/x2nBqmEU)
+
+🧑‍💻 GitHub:[https://github.com/Lancer-GWL](https://github.com/Lancer-GWL)
